@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: master 
+  branch: master
   repo: sagarbhalodiya1121/docusaurus
 
 # These lines should *not* be indented
@@ -8,26 +8,49 @@ media_folder: "static/img" # Media files will be stored in the repo under static
 public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-- name: blog
-  label: "blog"
-  folder: my-docs/blog
-  identifier_field: title
-  extension: md
-  widget: "list"
-  create: true
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-  fields:
-    - { name: title, label: Title, widget: string }
-    - { name: body, label: Body, widget: markdown }
-    - { name: slug, label: Slug, widget: string }
-    - label: "Tags"
-      name: "tags"
-      widget: "list"
-    - label: "Authors"
-      name: "authors" 
-      widget: "list"
-      fields:
-        - { name: name, label: Name, widget: string }
-        - { name: title, label: Title, widget: string } 
-        - { name: url, label: URL, widget: string } 
-        - { name: imageUrl, label: ImageURL, widget: string } 
+  - name: blog
+    label: "blog"
+    folder: my-docs/blog
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: slug, label: Slug, widget: string }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+      - label: "Authors"
+        name: "authors"
+        widget: "list"
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: url, label: URL, widget: string }
+          - { name: imageUrl, label: ImageURL, widget: string }
+  - name: grafana
+    label: "Grafana"
+    folder: src/pages/grafana
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - { name: title, label: Grafana Title, widget: string }
+      - { name: body, label: Grafana Body, widget: markdown }
+      - { name: slug, label: Grafana Slug, widget: string }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+      - label: "Authors"
+        name: "authors"
+        widget: "list"
+        fields:
+          - { name: name, label: Grafana Name, widget: string }
+          - { name: title, label: Grafana Title, widget: string }
+          - { name: url, label: Grafana URL, widget: string }
+          - { name: imageUrl, label: Grafana ImageURL, widget: string }
