@@ -33,7 +33,7 @@ collections:
           - { name: imageUrl, label: ImageURL, widget: string }
   - name: grafana
     label: "Grafana"
-    folder: my-docs/src/pages/grafana
+    folder: ../../src/pages/grafana
     identifier_field: title
     extension: md
     widget: "list"
